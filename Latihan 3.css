@@ -1,0 +1,120 @@
+/* Latihan 3.css */
+
+/* Mengatur gaya global */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f8ff; /* Background biru muda */
+    color: #333;
+    text-align: center; /* Menyelaraskan teks ke tengah */
+}
+
+/* Mengatur gaya untuk h1 */
+h1 {
+    font-size: 36px;
+    color: #fff;
+    background: linear-gradient(135deg, #ff6f61, #d1c4e9); /* Gradien warna */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Bayangan teks untuk efek 3D */
+    animation: bounce 2s infinite; /* Menambahkan animasi keyframe */
+}
+
+/* Mengatur gaya untuk gambar */
+img {
+    max-width: 80%; /* Membatasi lebar gambar agar responsif */
+    height: auto; /* Menjaga rasio aspek gambar */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+    animation: fadeIn 3s ease-in; /* Menambahkan animasi keyframe */
+}
+
+/* Mengatur gaya untuk paragraf */
+p {
+    font-size: 18px;
+    color: #555;
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-width: 80%;
+    margin: 20px auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1s ease-out; /* Menambahkan animasi keyframe */
+}
+
+/* Mengatur gaya untuk tombol */
+.cd__btn {
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    background-color: #ff6f61;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+    margin: 20px;
+    animation: pulse 2s infinite; /* Menambahkan animasi keyframe */
+}
+
+.cd__btn:hover {
+    background-color: #d1c4e9;
+    transform: scale(1.1);
+}
+
+/* Keyframe Animations */
+
+/* Animasi bounce untuk h1 */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Animasi fadeIn untuk gambar */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animasi slideIn untuk paragraf */
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Animasi pulse untuk tombol */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        background-color: #ff6f61;
+    }
+    50% {
+        transform: scale(1.05);
+        background-color: #ff8a75;
+    }
+    100% {
+        transform: scale(1);
+        background-color: #ff6f61;
+    }
+}

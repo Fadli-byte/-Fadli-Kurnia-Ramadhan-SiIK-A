@@ -1,0 +1,109 @@
+/* Latihan 2.css */
+
+/* Mengatur gaya global */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+  color: #333;
+}
+
+/* Mengatur gaya untuk h1 */
+h1 {
+  font-size: 36px;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+h1::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.1);
+  display: block;
+  z-index: 1;
+  transform: scaleX(1.5);
+  transform-origin: 0 0;
+  animation: animate-text 5s linear infinite;
+}
+
+@keyframes animate-text {
+  0% {
+      transform: scaleX(1.5);
+  }
+  100% {
+      transform: scaleX(0.5);
+  }
+}
+
+/* Mengatur gaya untuk h2 */
+h2 {
+  font-size: 28px;
+  text-align: center;
+  color: #333;
+  margin: 20px;
+  padding: 10px;
+  background-color: #eaeaea;
+  border-left: 5px solid #ff7e5f;
+  border-radius: 5px;
+}
+
+/* Mengatur gaya untuk h3 */
+h3 {
+  font-size: 24px;
+  text-align: center;
+  color: #555;
+  margin: 20px;
+}
+
+/* Mengatur gaya untuk h4 */
+h4 {
+  font-size: 20px;
+  text-align: center;
+  color: #666;
+  margin: 20px;
+}
+
+/* Mengatur gaya untuk paragraf */
+p {
+  font-size: 18px;
+  text-align: center;
+  color: #777;
+  margin: 20px;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+/* Mengatur gaya untuk tombol */
+.cd__btn {
+  display: inline-block;
+  font-size: 18px;
+  color: #fff;
+  background-color: #ff7e5f;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.cd__btn:hover {
+  background-color: #feb47b;
+  transform: scale(1.05);
+}

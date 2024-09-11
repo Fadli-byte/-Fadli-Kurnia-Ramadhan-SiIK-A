@@ -1,0 +1,119 @@
+/* Latihan5.css */
+
+/* Mengatur gaya global */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f8ff; /* Background biru muda */
+  color: #333;
+  text-align: center;
+}
+
+/* Gaya untuk h1 */
+h1 {
+  font-size: 28px;
+  color: #fff;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradien warna */
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 2s ease-in;
+}
+
+/* Gaya untuk tabel */
+.form-table {
+  width: 70%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  animation: slideIn 1s ease-out;
+}
+
+/* Gaya untuk header tabel */
+.form-table td {
+  padding: 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+/* Gaya untuk input */
+.form-input, .form-select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s;
+}
+
+/* Gaya untuk input fokus */
+.form-input:focus, .form-select:focus {
+  border-color: #ff7e5f;
+  outline: none;
+}
+
+/* Gaya untuk tombol submit */
+.submit-button {
+  display: inline-block;
+  font-size: 18px;
+  color: #fff;
+  background-color: #ff7e5f;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  margin: 20px 0;
+  animation: pulse 2s infinite; /* Menambahkan animasi keyframe */
+}
+
+.submit-button:hover {
+  background-color: #feb47b;
+  transform: scale(1.1);
+}
+
+/* Keyframe Animations */
+
+/* Animasi fadeIn untuk h1 */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+/* Animasi slideIn untuk tabel */
+@keyframes slideIn {
+  from {
+      transform: translateY(-20px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+/* Animasi pulse untuk tombol */
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+      background-color: #ff7e5f;
+  }
+  50% {
+      transform: scale(1.05);
+      background-color: #ff8a75;
+  }
+  100% {
+      transform: scale(1);
+      background-color: #ff7e5f;
+  }
+}

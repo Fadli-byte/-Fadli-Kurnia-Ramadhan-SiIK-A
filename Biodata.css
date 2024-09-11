@@ -1,0 +1,98 @@
+/* Biodata.css */
+
+/* Mengatur gaya global */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Background putih muda */
+    color: #333;
+    text-align: center;
+}
+
+/* Gaya untuk h1 */
+h1 {
+    font-size: 28px;
+    color: #fff;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradien warna */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 2s ease-in;
+}
+
+/* Gaya untuk tabel */
+.biodata-table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    animation: slideIn 1s ease-out;
+}
+
+/* Gaya untuk header tabel */
+.biodata-table thead {
+    background: #ff7e5f; /* Warna latar belakang header tabel */
+    color: #fff;
+}
+
+.biodata-table th, .biodata-table td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* Gaya untuk gambar profil */
+.profile-pic {
+    width: 100px;
+    height: 100px; /* Memastikan gambar memiliki tinggi yang sama dengan lebar */
+    object-fit: cover; /* Menjaga rasio aspek dan mengisi area gambar */
+    border-radius: 50%; /* Membuat gambar menjadi bulat */
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+    animation: pulse 2s infinite; /* Menambahkan animasi keyframe */
+}
+
+/* Keyframe Animations */
+
+/* Animasi fadeIn untuk h1 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animasi slideIn untuk tabel */
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Animasi pulse untuk gambar */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+    }
+}
